@@ -1,0 +1,16 @@
+{
+  "code": "OTS1226",
+  "kind": "Ots",
+  "source": "List emisyjny nr 82/2026 Ministra Finansów i Gospodarki z dnia 20 sierpnia 2026 r. (OTS1226), ust. 12-17 i 21-23",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 4,
+  "periodCount": 1,
+  "capitalizes": false,
+  "roundCapitalizedBase": false,
+  "principalFloor": "None",
+  "sale": { "from": "2026-09-01", "to": "2026-09-30" },
+  "rate": { "type": "fixed", "firstPeriodRatePercent": 2.00, "marginPercent": 0.00 },
+  "fee": { "type": "forfeitAllInterest" },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

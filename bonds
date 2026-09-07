@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+# Runs the calculator from the repository directory: ./bonds table --units 1000
+#
+# The build goes to stderr, so stdout stays clean and can be redirected to a
+# file or piped. The build is incremental, so subsequent runs compile nothing
+# anew.
+#
+# BONDS_SKIP_BUILD=1 skips the build. ./bonds-all uses it: it builds once and
+# then calls the calculator dozens of times.
+set -e
+
+root=$(cd "$(dirname "$0")" && pwd)
+project="$root/src/Bonds.Cli/Bonds.Cli.csproj"
+
+if [ "${BONDS_SKIP_BUILD:-0}" != "1" ]; then
+    dotnet build "$project" --configuration Release --verbosity quiet --nologo >&2
+fi
+
+# The output directory depends on TargetFramework, so it is not hard-coded.
+binary=$(find "$root/src/Bonds.Cli/bin/Release" -name bonds.dll -not -path '*/publish/*' | sort | tail -n 1)
+
+exec dotnet "$binary" "$@"

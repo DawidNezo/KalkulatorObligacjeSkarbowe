@@ -1,0 +1,16 @@
+{
+  "code": "TOS0929",
+  "kind": "Tos",
+  "source": "List emisyjny nr 85/2026 Ministra Finansów i Gospodarki z dnia 20 sierpnia 2026 r. (TOS0929), ust. 14-17 i 24, zał. 1-2",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 1,
+  "periodCount": 3,
+  "capitalizes": true,
+  "roundCapitalizedBase": true,
+  "principalFloor": "AllPeriods",
+  "sale": { "from": "2026-09-01", "to": "2026-09-30" },
+  "rate": { "type": "fixed", "firstPeriodRatePercent": 4.40, "marginPercent": 0.00 },
+  "fee": { "type": "accruedCapped", "amountZloty": 1.00 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

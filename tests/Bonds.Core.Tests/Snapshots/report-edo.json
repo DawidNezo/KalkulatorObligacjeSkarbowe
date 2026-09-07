@@ -1,0 +1,3109 @@
+{
+  "purchase": "2026-08-17",
+  "units": 100,
+  "taxRate": 0.19,
+  "scenario": {
+    "name": "Snapshot: CPI 3,50%, NBP 4,00%",
+    "assumedCpi": 0.0350,
+    "assumedNbpReference": 0.0400
+  },
+  "bonds": [
+    {
+      "code": "EDO0836",
+      "kind": "Edo",
+      "termMonths": 120,
+      "maturity": "2036-08-17",
+      "source": "test fixture for EDO0836",
+      "periods": [
+        {
+          "index": 0,
+          "start": "2026-08-17",
+          "end": "2027-08-17",
+          "actualDays": 365,
+          "annualRate": 0.0535,
+          "isProjected": false
+        },
+        {
+          "index": 1,
+          "start": "2027-08-17",
+          "end": "2028-08-17",
+          "actualDays": 366,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 2,
+          "start": "2028-08-17",
+          "end": "2029-08-17",
+          "actualDays": 365,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 3,
+          "start": "2029-08-17",
+          "end": "2030-08-17",
+          "actualDays": 365,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 4,
+          "start": "2030-08-17",
+          "end": "2031-08-17",
+          "actualDays": 365,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 5,
+          "start": "2031-08-17",
+          "end": "2032-08-17",
+          "actualDays": 366,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 6,
+          "start": "2032-08-17",
+          "end": "2033-08-17",
+          "actualDays": 365,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 7,
+          "start": "2033-08-17",
+          "end": "2034-08-17",
+          "actualDays": 365,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 8,
+          "start": "2034-08-17",
+          "end": "2035-08-17",
+          "actualDays": 365,
+          "annualRate": 0.0550,
+          "isProjected": true
+        },
+        {
+          "index": 9,
+          "start": "2035-08-17",
+          "end": "2036-08-17",
+          "actualDays": 366,
+          "annualRate": 0.0550,
+          "isProjected": true
+        }
+      ],
+      "exits": [
+        {
+          "month": 1,
+          "date": "2026-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 4500,
+            "feeGrosze": 4500,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 2,
+          "date": "2026-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 8900,
+            "feeGrosze": 8900,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 3,
+          "date": "2026-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 13500,
+            "feeGrosze": 13500,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 4,
+          "date": "2026-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 17900,
+            "feeGrosze": 17900,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 5,
+          "date": "2027-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 22400,
+            "feeGrosze": 22400,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 6,
+          "date": "2027-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 27000,
+            "feeGrosze": 27000,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 7,
+          "date": "2027-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 31100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1001100,
+            "totalReceiptsGrossZloty": 10011,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 209,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000891,
+              "netProfitGrosze": 891,
+              "netProfitZloty": 8.91,
+              "netProfitRate": 0.000891,
+              "annualisedNetReturn": 0.001535
+            }
+          }
+        },
+        {
+          "month": 8,
+          "date": "2027-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 35600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1005600,
+            "totalReceiptsGrossZloty": 10056,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 1064,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1004536,
+              "netProfitGrosze": 4536,
+              "netProfitZloty": 45.36,
+              "netProfitRate": 0.004536,
+              "annualisedNetReturn": 0.006821
+            }
+          }
+        },
+        {
+          "month": 9,
+          "date": "2027-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 40000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1010000,
+            "totalReceiptsGrossZloty": 10100,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 1900,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1008100,
+              "netProfitGrosze": 8100,
+              "netProfitZloty": 81,
+              "netProfitRate": 0.0081,
+              "annualisedNetReturn": 0.010844
+            }
+          }
+        },
+        {
+          "month": 10,
+          "date": "2027-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 44600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1014600,
+            "totalReceiptsGrossZloty": 10146,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 2774,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1011826,
+              "netProfitGrosze": 11826,
+              "netProfitZloty": 118.26,
+              "netProfitRate": 0.011826,
+              "annualisedNetReturn": 0.014216
+            }
+          }
+        },
+        {
+          "month": 11,
+          "date": "2027-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 49000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1019000,
+            "totalReceiptsGrossZloty": 10190,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 3610,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1015390,
+              "netProfitGrosze": 15390,
+              "netProfitZloty": 153.9,
+              "netProfitRate": 0.01539,
+              "annualisedNetReturn": 0.016830
+            }
+          }
+        },
+        {
+          "month": 12,
+          "date": "2027-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0535,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 53500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1023500,
+            "totalReceiptsGrossZloty": 10235,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 4465,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1019035,
+              "netProfitGrosze": 19035,
+              "netProfitZloty": 190.35,
+              "netProfitRate": 0.019035,
+              "annualisedNetReturn": 0.019035
+            }
+          }
+        },
+        {
+          "month": 13,
+          "date": "2027-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 58400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1028400,
+            "totalReceiptsGrossZloty": 10284,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 5396,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1023004,
+              "netProfitGrosze": 23004,
+              "netProfitZloty": 230.04,
+              "netProfitRate": 0.023004,
+              "annualisedNetReturn": 0.021184
+            }
+          }
+        },
+        {
+          "month": 14,
+          "date": "2027-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 63200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1033200,
+            "totalReceiptsGrossZloty": 10332,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 6308,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1026892,
+              "netProfitGrosze": 26892,
+              "netProfitZloty": 268.92,
+              "netProfitRate": 0.026892,
+              "annualisedNetReturn": 0.022997
+            }
+          }
+        },
+        {
+          "month": 15,
+          "date": "2027-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 68100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1038100,
+            "totalReceiptsGrossZloty": 10381,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 7239,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1030861,
+              "netProfitGrosze": 30861,
+              "netProfitZloty": 308.61,
+              "netProfitRate": 0.030861,
+              "annualisedNetReturn": 0.024573
+            }
+          }
+        },
+        {
+          "month": 16,
+          "date": "2027-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 72800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1042800,
+            "totalReceiptsGrossZloty": 10428,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 8132,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1034668,
+              "netProfitGrosze": 34668,
+              "netProfitZloty": 346.68,
+              "netProfitRate": 0.034668,
+              "annualisedNetReturn": 0.025872
+            }
+          }
+        },
+        {
+          "month": 17,
+          "date": "2028-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 77700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1047700,
+            "totalReceiptsGrossZloty": 10477,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 9063,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1038637,
+              "netProfitGrosze": 38637,
+              "netProfitZloty": 386.37,
+              "netProfitRate": 0.038637,
+              "annualisedNetReturn": 0.027072
+            }
+          }
+        },
+        {
+          "month": 18,
+          "date": "2028-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 82600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1052600,
+            "totalReceiptsGrossZloty": 10526,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 9994,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1042606,
+              "netProfitGrosze": 42606,
+              "netProfitZloty": 426.06,
+              "netProfitRate": 0.042606,
+              "annualisedNetReturn": 0.028128
+            }
+          }
+        },
+        {
+          "month": 19,
+          "date": "2028-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 87200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1057200,
+            "totalReceiptsGrossZloty": 10572,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 10868,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1046332,
+              "netProfitGrosze": 46332,
+              "netProfitZloty": 463.32,
+              "netProfitRate": 0.046332,
+              "annualisedNetReturn": 0.029013
+            }
+          }
+        },
+        {
+          "month": 20,
+          "date": "2028-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 92100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1062100,
+            "totalReceiptsGrossZloty": 10621,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 11799,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1050301,
+              "netProfitGrosze": 50301,
+              "netProfitZloty": 503.01,
+              "netProfitRate": 0.050301,
+              "annualisedNetReturn": 0.029851
+            }
+          }
+        },
+        {
+          "month": 21,
+          "date": "2028-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 96900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1066900,
+            "totalReceiptsGrossZloty": 10669,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 12711,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1054189,
+              "netProfitGrosze": 54189,
+              "netProfitZloty": 541.89,
+              "netProfitRate": 0.054189,
+              "annualisedNetReturn": 0.030602
+            }
+          }
+        },
+        {
+          "month": 22,
+          "date": "2028-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 101800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1071800,
+            "totalReceiptsGrossZloty": 10718,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 13642,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1058158,
+              "netProfitGrosze": 58158,
+              "netProfitZloty": 581.58,
+              "netProfitRate": 0.058158,
+              "annualisedNetReturn": 0.031275
+            }
+          }
+        },
+        {
+          "month": 23,
+          "date": "2028-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 106500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1076500,
+            "totalReceiptsGrossZloty": 10765,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 14535,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1061965,
+              "netProfitGrosze": 61965,
+              "netProfitZloty": 619.65,
+              "netProfitRate": 0.061965,
+              "annualisedNetReturn": 0.031845
+            }
+          }
+        },
+        {
+          "month": 24,
+          "date": "2028-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 1,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 111400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1081400,
+            "totalReceiptsGrossZloty": 10814,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 15466,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1065934,
+              "netProfitGrosze": 65934,
+              "netProfitZloty": 659.34,
+              "netProfitRate": 0.065934,
+              "annualisedNetReturn": 0.032396
+            }
+          }
+        },
+        {
+          "month": 25,
+          "date": "2028-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 116600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1086600,
+            "totalReceiptsGrossZloty": 10866,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 16454,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1070146,
+              "netProfitGrosze": 70146,
+              "netProfitZloty": 701.46,
+              "netProfitRate": 0.070146,
+              "annualisedNetReturn": 0.033007
+            }
+          }
+        },
+        {
+          "month": 26,
+          "date": "2028-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 121700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1091700,
+            "totalReceiptsGrossZloty": 10917,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 17423,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1074277,
+              "netProfitGrosze": 74277,
+              "netProfitZloty": 742.77,
+              "netProfitRate": 0.074277,
+              "annualisedNetReturn": 0.033571
+            }
+          }
+        },
+        {
+          "month": 27,
+          "date": "2028-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 126900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1096900,
+            "totalReceiptsGrossZloty": 10969,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 18411,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1078489,
+              "netProfitGrosze": 78489,
+              "netProfitZloty": 784.89,
+              "netProfitRate": 0.078489,
+              "annualisedNetReturn": 0.034079
+            }
+          }
+        },
+        {
+          "month": 28,
+          "date": "2028-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 131900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1101900,
+            "totalReceiptsGrossZloty": 11019,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 19361,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1082539,
+              "netProfitGrosze": 82539,
+              "netProfitZloty": 825.39,
+              "netProfitRate": 0.082539,
+              "annualisedNetReturn": 0.034519
+            }
+          }
+        },
+        {
+          "month": 29,
+          "date": "2029-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 137100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1107100,
+            "totalReceiptsGrossZloty": 11071,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 20349,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1086751,
+              "netProfitGrosze": 86751,
+              "netProfitZloty": 867.51,
+              "netProfitRate": 0.086751,
+              "annualisedNetReturn": 0.034947
+            }
+          }
+        },
+        {
+          "month": 30,
+          "date": "2029-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 142300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1112300,
+            "totalReceiptsGrossZloty": 11123,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 21337,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1090963,
+              "netProfitGrosze": 90963,
+              "netProfitZloty": 909.63,
+              "netProfitRate": 0.090963,
+              "annualisedNetReturn": 0.035339
+            }
+          }
+        },
+        {
+          "month": 31,
+          "date": "2029-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 146900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1116900,
+            "totalReceiptsGrossZloty": 11169,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 22211,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1094689,
+              "netProfitGrosze": 94689,
+              "netProfitZloty": 946.89,
+              "netProfitRate": 0.094689,
+              "annualisedNetReturn": 0.035638
+            }
+          }
+        },
+        {
+          "month": 32,
+          "date": "2029-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 152100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1122100,
+            "totalReceiptsGrossZloty": 11221,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 23199,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1098901,
+              "netProfitGrosze": 98901,
+              "netProfitZloty": 989.01,
+              "netProfitRate": 0.098901,
+              "annualisedNetReturn": 0.035974
+            }
+          }
+        },
+        {
+          "month": 33,
+          "date": "2029-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 157200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1127200,
+            "totalReceiptsGrossZloty": 11272,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 24168,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1103032,
+              "netProfitGrosze": 103032,
+              "netProfitZloty": 1030.32,
+              "netProfitRate": 0.103032,
+              "annualisedNetReturn": 0.036293
+            }
+          }
+        },
+        {
+          "month": 34,
+          "date": "2029-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 162400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1132400,
+            "totalReceiptsGrossZloty": 11324,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 25156,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1107244,
+              "netProfitGrosze": 107244,
+              "netProfitZloty": 1072.44,
+              "netProfitRate": 0.107244,
+              "annualisedNetReturn": 0.036580
+            }
+          }
+        },
+        {
+          "month": 35,
+          "date": "2029-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 167400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1137400,
+            "totalReceiptsGrossZloty": 11374,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 26106,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1111294,
+              "netProfitGrosze": 111294,
+              "netProfitZloty": 1112.94,
+              "netProfitRate": 0.111294,
+              "annualisedNetReturn": 0.036828
+            }
+          }
+        },
+        {
+          "month": 36,
+          "date": "2029-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 2,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 172600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1142600,
+            "totalReceiptsGrossZloty": 11426,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 27094,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1115506,
+              "netProfitGrosze": 115506,
+              "netProfitZloty": 1155.06,
+              "netProfitRate": 0.115506,
+              "annualisedNetReturn": 0.037073
+            }
+          }
+        },
+        {
+          "month": 37,
+          "date": "2029-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 178000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1148000,
+            "totalReceiptsGrossZloty": 11480,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 28120,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1119880,
+              "netProfitGrosze": 119880,
+              "netProfitZloty": 1198.8,
+              "netProfitRate": 0.11988,
+              "annualisedNetReturn": 0.037350
+            }
+          }
+        },
+        {
+          "month": 38,
+          "date": "2029-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 183300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1153300,
+            "totalReceiptsGrossZloty": 11533,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 29127,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1124173,
+              "netProfitGrosze": 124173,
+              "netProfitZloty": 1241.73,
+              "netProfitRate": 0.124173,
+              "annualisedNetReturn": 0.037615
+            }
+          }
+        },
+        {
+          "month": 39,
+          "date": "2029-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 188800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1158800,
+            "totalReceiptsGrossZloty": 11588,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 30172,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1128628,
+              "netProfitGrosze": 128628,
+              "netProfitZloty": 1286.28,
+              "netProfitRate": 0.128628,
+              "annualisedNetReturn": 0.037876
+            }
+          }
+        },
+        {
+          "month": 40,
+          "date": "2029-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 194100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1164100,
+            "totalReceiptsGrossZloty": 11641,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 31179,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1132921,
+              "netProfitGrosze": 132921,
+              "netProfitZloty": 1329.21,
+              "netProfitRate": 0.132921,
+              "annualisedNetReturn": 0.038107
+            }
+          }
+        },
+        {
+          "month": 41,
+          "date": "2030-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 199600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1169600,
+            "totalReceiptsGrossZloty": 11696,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 32224,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1137376,
+              "netProfitGrosze": 137376,
+              "netProfitZloty": 1373.76,
+              "netProfitRate": 0.137376,
+              "annualisedNetReturn": 0.038334
+            }
+          }
+        },
+        {
+          "month": 42,
+          "date": "2030-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 205100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1175100,
+            "totalReceiptsGrossZloty": 11751,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 33269,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1141831,
+              "netProfitGrosze": 141831,
+              "netProfitZloty": 1418.31,
+              "netProfitRate": 0.141831,
+              "annualisedNetReturn": 0.038545
+            }
+          }
+        },
+        {
+          "month": 43,
+          "date": "2030-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 210000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1180000,
+            "totalReceiptsGrossZloty": 11800,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 34200,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1145800,
+              "netProfitGrosze": 145800,
+              "netProfitZloty": 1458,
+              "netProfitRate": 0.1458,
+              "annualisedNetReturn": 0.038710
+            }
+          }
+        },
+        {
+          "month": 44,
+          "date": "2030-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 215500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1185500,
+            "totalReceiptsGrossZloty": 11855,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 35245,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1150255,
+              "netProfitGrosze": 150255,
+              "netProfitZloty": 1502.55,
+              "netProfitRate": 0.150255,
+              "annualisedNetReturn": 0.038896
+            }
+          }
+        },
+        {
+          "month": 45,
+          "date": "2030-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 220800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1190800,
+            "totalReceiptsGrossZloty": 11908,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 36252,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1154548,
+              "netProfitGrosze": 154548,
+              "netProfitZloty": 1545.48,
+              "netProfitRate": 0.154548,
+              "annualisedNetReturn": 0.039059
+            }
+          }
+        },
+        {
+          "month": 46,
+          "date": "2030-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 226300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1196300,
+            "totalReceiptsGrossZloty": 11963,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 37297,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1159003,
+              "netProfitGrosze": 159003,
+              "netProfitZloty": 1590.03,
+              "netProfitRate": 0.159003,
+              "annualisedNetReturn": 0.039221
+            }
+          }
+        },
+        {
+          "month": 47,
+          "date": "2030-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 231600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1201600,
+            "totalReceiptsGrossZloty": 12016,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 38304,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1163296,
+              "netProfitGrosze": 163296,
+              "netProfitZloty": 1632.96,
+              "netProfitRate": 0.163296,
+              "annualisedNetReturn": 0.039363
+            }
+          }
+        },
+        {
+          "month": 48,
+          "date": "2030-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 3,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 237100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1207100,
+            "totalReceiptsGrossZloty": 12071,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 39349,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1167751,
+              "netProfitGrosze": 167751,
+              "netProfitZloty": 1677.51,
+              "netProfitRate": 0.167751,
+              "annualisedNetReturn": 0.039504
+            }
+          }
+        },
+        {
+          "month": 49,
+          "date": "2030-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 242800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1212800,
+            "totalReceiptsGrossZloty": 12128,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 40432,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1172368,
+              "netProfitGrosze": 172368,
+              "netProfitZloty": 1723.68,
+              "netProfitRate": 0.172368,
+              "annualisedNetReturn": 0.039670
+            }
+          }
+        },
+        {
+          "month": 50,
+          "date": "2030-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 248400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1218400,
+            "totalReceiptsGrossZloty": 12184,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 41496,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1176904,
+              "netProfitGrosze": 176904,
+              "netProfitZloty": 1769.04,
+              "netProfitRate": 0.176904,
+              "annualisedNetReturn": 0.039836
+            }
+          }
+        },
+        {
+          "month": 51,
+          "date": "2030-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 254200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1224200,
+            "totalReceiptsGrossZloty": 12242,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 42598,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1181602,
+              "netProfitGrosze": 181602,
+              "netProfitZloty": 1816.02,
+              "netProfitRate": 0.181602,
+              "annualisedNetReturn": 0.039999
+            }
+          }
+        },
+        {
+          "month": 52,
+          "date": "2030-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 259800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1229800,
+            "totalReceiptsGrossZloty": 12298,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 43662,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1186138,
+              "netProfitGrosze": 186138,
+              "netProfitZloty": 1861.38,
+              "netProfitRate": 0.186138,
+              "annualisedNetReturn": 0.040145
+            }
+          }
+        },
+        {
+          "month": 53,
+          "date": "2031-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 265600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1235600,
+            "totalReceiptsGrossZloty": 12356,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 44764,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1190836,
+              "netProfitGrosze": 190836,
+              "netProfitZloty": 1908.36,
+              "netProfitRate": 0.190836,
+              "annualisedNetReturn": 0.040288
+            }
+          }
+        },
+        {
+          "month": 54,
+          "date": "2031-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 271400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1241400,
+            "totalReceiptsGrossZloty": 12414,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 45866,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1195534,
+              "netProfitGrosze": 195534,
+              "netProfitZloty": 1955.34,
+              "netProfitRate": 0.195534,
+              "annualisedNetReturn": 0.040423
+            }
+          }
+        },
+        {
+          "month": 55,
+          "date": "2031-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 276600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1246600,
+            "totalReceiptsGrossZloty": 12466,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 46854,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1199746,
+              "netProfitGrosze": 199746,
+              "netProfitZloty": 1997.46,
+              "netProfitRate": 0.199746,
+              "annualisedNetReturn": 0.040531
+            }
+          }
+        },
+        {
+          "month": 56,
+          "date": "2031-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 282400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1252400,
+            "totalReceiptsGrossZloty": 12524,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 47956,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1204444,
+              "netProfitGrosze": 204444,
+              "netProfitZloty": 2044.44,
+              "netProfitRate": 0.204444,
+              "annualisedNetReturn": 0.040650
+            }
+          }
+        },
+        {
+          "month": 57,
+          "date": "2031-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 288000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1258000,
+            "totalReceiptsGrossZloty": 12580,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 49020,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1208980,
+              "netProfitGrosze": 208980,
+              "netProfitZloty": 2089.8,
+              "netProfitRate": 0.20898,
+              "annualisedNetReturn": 0.040756
+            }
+          }
+        },
+        {
+          "month": 58,
+          "date": "2031-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 293700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1263700,
+            "totalReceiptsGrossZloty": 12637,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 50103,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1213597,
+              "netProfitGrosze": 213597,
+              "netProfitZloty": 2135.97,
+              "netProfitRate": 0.213597,
+              "annualisedNetReturn": 0.040846
+            }
+          }
+        },
+        {
+          "month": 59,
+          "date": "2031-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 299300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1269300,
+            "totalReceiptsGrossZloty": 12693,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 51167,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1218133,
+              "netProfitGrosze": 218133,
+              "netProfitZloty": 2181.33,
+              "netProfitRate": 0.218133,
+              "annualisedNetReturn": 0.040939
+            }
+          }
+        },
+        {
+          "month": 60,
+          "date": "2031-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 4,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 305100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1275100,
+            "totalReceiptsGrossZloty": 12751,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 52269,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1222831,
+              "netProfitGrosze": 222831,
+              "netProfitZloty": 2228.31,
+              "netProfitRate": 0.222831,
+              "annualisedNetReturn": 0.041031
+            }
+          }
+        },
+        {
+          "month": 61,
+          "date": "2031-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 311200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1281200,
+            "totalReceiptsGrossZloty": 12812,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 53428,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1227772,
+              "netProfitGrosze": 227772,
+              "netProfitZloty": 2277.72,
+              "netProfitRate": 0.227772,
+              "annualisedNetReturn": 0.041157
+            }
+          }
+        },
+        {
+          "month": 62,
+          "date": "2031-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 317100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1287100,
+            "totalReceiptsGrossZloty": 12871,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 54549,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1232551,
+              "netProfitGrosze": 232551,
+              "netProfitZloty": 2325.51,
+              "netProfitRate": 0.232551,
+              "annualisedNetReturn": 0.041272
+            }
+          }
+        },
+        {
+          "month": 63,
+          "date": "2031-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 323100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1293100,
+            "totalReceiptsGrossZloty": 12931,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 55689,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1237411,
+              "netProfitGrosze": 237411,
+              "netProfitZloty": 2374.11,
+              "netProfitRate": 0.237411,
+              "annualisedNetReturn": 0.041371
+            }
+          }
+        },
+        {
+          "month": 64,
+          "date": "2031-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 329000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1299000,
+            "totalReceiptsGrossZloty": 12990,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 56810,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1242190,
+              "netProfitGrosze": 242190,
+              "netProfitZloty": 2421.9,
+              "netProfitRate": 0.24219,
+              "annualisedNetReturn": 0.041473
+            }
+          }
+        },
+        {
+          "month": 65,
+          "date": "2032-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 335100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1305100,
+            "totalReceiptsGrossZloty": 13051,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 57969,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1247131,
+              "netProfitGrosze": 247131,
+              "netProfitZloty": 2471.31,
+              "netProfitRate": 0.247131,
+              "annualisedNetReturn": 0.041573
+            }
+          }
+        },
+        {
+          "month": 66,
+          "date": "2032-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 341200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1311200,
+            "totalReceiptsGrossZloty": 13112,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 59128,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1252072,
+              "netProfitGrosze": 252072,
+              "netProfitZloty": 2520.72,
+              "netProfitRate": 0.252072,
+              "annualisedNetReturn": 0.041667
+            }
+          }
+        },
+        {
+          "month": 67,
+          "date": "2032-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 346900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1316900,
+            "totalReceiptsGrossZloty": 13169,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 60211,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1256689,
+              "netProfitGrosze": 256689,
+              "netProfitZloty": 2566.89,
+              "netProfitRate": 0.256689,
+              "annualisedNetReturn": 0.041748
+            }
+          }
+        },
+        {
+          "month": 68,
+          "date": "2032-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 353000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1323000,
+            "totalReceiptsGrossZloty": 13230,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 61370,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1261630,
+              "netProfitGrosze": 261630,
+              "netProfitZloty": 2616.3,
+              "netProfitRate": 0.26163,
+              "annualisedNetReturn": 0.041831
+            }
+          }
+        },
+        {
+          "month": 69,
+          "date": "2032-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 358800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1328800,
+            "totalReceiptsGrossZloty": 13288,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 62472,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1266328,
+              "netProfitGrosze": 266328,
+              "netProfitZloty": 2663.28,
+              "netProfitRate": 0.266328,
+              "annualisedNetReturn": 0.041894
+            }
+          }
+        },
+        {
+          "month": 70,
+          "date": "2032-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 364900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1334900,
+            "totalReceiptsGrossZloty": 13349,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 63631,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1271269,
+              "netProfitGrosze": 271269,
+              "netProfitZloty": 2712.69,
+              "netProfitRate": 0.271269,
+              "annualisedNetReturn": 0.041967
+            }
+          }
+        },
+        {
+          "month": 71,
+          "date": "2032-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 370800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1340800,
+            "totalReceiptsGrossZloty": 13408,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 64752,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1276048,
+              "netProfitGrosze": 276048,
+              "netProfitZloty": 2760.48,
+              "netProfitRate": 0.276048,
+              "annualisedNetReturn": 0.042033
+            }
+          }
+        },
+        {
+          "month": 72,
+          "date": "2032-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 5,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 376900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1346900,
+            "totalReceiptsGrossZloty": 13469,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 65911,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1280989,
+              "netProfitGrosze": 280989,
+              "netProfitZloty": 2809.89,
+              "netProfitRate": 0.280989,
+              "annualisedNetReturn": 0.042096
+            }
+          }
+        },
+        {
+          "month": 73,
+          "date": "2032-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 383300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1353300,
+            "totalReceiptsGrossZloty": 13533,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 67127,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1286173,
+              "netProfitGrosze": 286173,
+              "netProfitZloty": 2861.73,
+              "netProfitRate": 0.286173,
+              "annualisedNetReturn": 0.042188
+            }
+          }
+        },
+        {
+          "month": 74,
+          "date": "2032-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 389500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1359500,
+            "totalReceiptsGrossZloty": 13595,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 68305,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1291195,
+              "netProfitGrosze": 291195,
+              "netProfitZloty": 2911.95,
+              "netProfitRate": 0.291195,
+              "annualisedNetReturn": 0.042273
+            }
+          }
+        },
+        {
+          "month": 75,
+          "date": "2032-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 396000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1366000,
+            "totalReceiptsGrossZloty": 13660,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 69540,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1296460,
+              "netProfitGrosze": 296460,
+              "netProfitZloty": 2964.6,
+              "netProfitRate": 0.29646,
+              "annualisedNetReturn": 0.042365
+            }
+          }
+        },
+        {
+          "month": 76,
+          "date": "2032-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 402200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1372200,
+            "totalReceiptsGrossZloty": 13722,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 70718,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1301482,
+              "netProfitGrosze": 301482,
+              "netProfitZloty": 3014.82,
+              "netProfitRate": 0.301482,
+              "annualisedNetReturn": 0.042440
+            }
+          }
+        },
+        {
+          "month": 77,
+          "date": "2033-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 408600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1378600,
+            "totalReceiptsGrossZloty": 13786,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 71934,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1306666,
+              "netProfitGrosze": 306666,
+              "netProfitZloty": 3066.66,
+              "netProfitRate": 0.306666,
+              "annualisedNetReturn": 0.042512
+            }
+          }
+        },
+        {
+          "month": 78,
+          "date": "2033-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 415100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1385100,
+            "totalReceiptsGrossZloty": 13851,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 73169,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1311931,
+              "netProfitGrosze": 311931,
+              "netProfitZloty": 3119.31,
+              "netProfitRate": 0.311931,
+              "annualisedNetReturn": 0.042590
+            }
+          }
+        },
+        {
+          "month": 79,
+          "date": "2033-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 420900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1390900,
+            "totalReceiptsGrossZloty": 13909,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 74271,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1316629,
+              "netProfitGrosze": 316629,
+              "netProfitZloty": 3166.29,
+              "netProfitRate": 0.316629,
+              "annualisedNetReturn": 0.042649
+            }
+          }
+        },
+        {
+          "month": 80,
+          "date": "2033-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 427300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1397300,
+            "totalReceiptsGrossZloty": 13973,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 75487,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1321813,
+              "netProfitGrosze": 321813,
+              "netProfitZloty": 3218.13,
+              "netProfitRate": 0.321813,
+              "annualisedNetReturn": 0.042709
+            }
+          }
+        },
+        {
+          "month": 81,
+          "date": "2033-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 433500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1403500,
+            "totalReceiptsGrossZloty": 14035,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 76665,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1326835,
+              "netProfitGrosze": 326835,
+              "netProfitZloty": 3268.35,
+              "netProfitRate": 0.326835,
+              "annualisedNetReturn": 0.042764
+            }
+          }
+        },
+        {
+          "month": 82,
+          "date": "2033-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 440000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1410000,
+            "totalReceiptsGrossZloty": 14100,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 77900,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1332100,
+              "netProfitGrosze": 332100,
+              "netProfitZloty": 3321,
+              "netProfitRate": 0.3321,
+              "annualisedNetReturn": 0.042825
+            }
+          }
+        },
+        {
+          "month": 83,
+          "date": "2033-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 446200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1416200,
+            "totalReceiptsGrossZloty": 14162,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 79078,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1337122,
+              "netProfitGrosze": 337122,
+              "netProfitZloty": 3371.22,
+              "netProfitRate": 0.337122,
+              "annualisedNetReturn": 0.042873
+            }
+          }
+        },
+        {
+          "month": 84,
+          "date": "2033-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 6,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 452600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1422600,
+            "totalReceiptsGrossZloty": 14226,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 80294,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1342306,
+              "netProfitGrosze": 342306,
+              "netProfitZloty": 3423.06,
+              "netProfitRate": 0.342306,
+              "annualisedNetReturn": 0.042918
+            }
+          }
+        },
+        {
+          "month": 85,
+          "date": "2033-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 459400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1429400,
+            "totalReceiptsGrossZloty": 14294,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 81586,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1347814,
+              "netProfitGrosze": 347814,
+              "netProfitZloty": 3478.14,
+              "netProfitRate": 0.347814,
+              "annualisedNetReturn": 0.042995
+            }
+          }
+        },
+        {
+          "month": 86,
+          "date": "2033-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 466000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1436000,
+            "totalReceiptsGrossZloty": 14360,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 82840,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1353160,
+              "netProfitGrosze": 353160,
+              "netProfitZloty": 3531.6,
+              "netProfitRate": 0.35316,
+              "annualisedNetReturn": 0.043068
+            }
+          }
+        },
+        {
+          "month": 87,
+          "date": "2033-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 472700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1442700,
+            "totalReceiptsGrossZloty": 14427,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 84113,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1358587,
+              "netProfitGrosze": 358587,
+              "netProfitZloty": 3585.87,
+              "netProfitRate": 0.358587,
+              "annualisedNetReturn": 0.043129
+            }
+          }
+        },
+        {
+          "month": 88,
+          "date": "2033-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 479300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1449300,
+            "totalReceiptsGrossZloty": 14493,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 85367,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1363933,
+              "netProfitGrosze": 363933,
+              "netProfitZloty": 3639.33,
+              "netProfitRate": 0.363933,
+              "annualisedNetReturn": 0.043193
+            }
+          }
+        },
+        {
+          "month": 89,
+          "date": "2034-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 486100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1456100,
+            "totalReceiptsGrossZloty": 14561,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 86659,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1369441,
+              "netProfitGrosze": 369441,
+              "netProfitZloty": 3694.41,
+              "netProfitRate": 0.369441,
+              "annualisedNetReturn": 0.043255
+            }
+          }
+        },
+        {
+          "month": 90,
+          "date": "2034-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 492900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1462900,
+            "totalReceiptsGrossZloty": 14629,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 87951,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1374949,
+              "netProfitGrosze": 374949,
+              "netProfitZloty": 3749.49,
+              "netProfitRate": 0.374949,
+              "annualisedNetReturn": 0.043313
+            }
+          }
+        },
+        {
+          "month": 91,
+          "date": "2034-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 499000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1469000,
+            "totalReceiptsGrossZloty": 14690,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 89110,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1379890,
+              "netProfitGrosze": 379890,
+              "netProfitZloty": 3798.9,
+              "netProfitRate": 0.37989,
+              "annualisedNetReturn": 0.043359
+            }
+          }
+        },
+        {
+          "month": 92,
+          "date": "2034-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 505800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1475800,
+            "totalReceiptsGrossZloty": 14758,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 90402,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1385398,
+              "netProfitGrosze": 385398,
+              "netProfitZloty": 3853.98,
+              "netProfitRate": 0.385398,
+              "annualisedNetReturn": 0.043411
+            }
+          }
+        },
+        {
+          "month": 93,
+          "date": "2034-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 512400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1482400,
+            "totalReceiptsGrossZloty": 14824,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 91656,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1390744,
+              "netProfitGrosze": 390744,
+              "netProfitZloty": 3907.44,
+              "netProfitRate": 0.390744,
+              "annualisedNetReturn": 0.043459
+            }
+          }
+        },
+        {
+          "month": 94,
+          "date": "2034-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 519200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1489200,
+            "totalReceiptsGrossZloty": 14892,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 92948,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1396252,
+              "netProfitGrosze": 396252,
+              "netProfitZloty": 3962.52,
+              "netProfitRate": 0.396252,
+              "annualisedNetReturn": 0.043504
+            }
+          }
+        },
+        {
+          "month": 95,
+          "date": "2034-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 525700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1495700,
+            "totalReceiptsGrossZloty": 14957,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 94183,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1401517,
+              "netProfitGrosze": 401517,
+              "netProfitZloty": 4015.17,
+              "netProfitRate": 0.401517,
+              "annualisedNetReturn": 0.043539
+            }
+          }
+        },
+        {
+          "month": 96,
+          "date": "2034-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 7,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 532500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1502500,
+            "totalReceiptsGrossZloty": 15025,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 95475,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1407025,
+              "netProfitGrosze": 407025,
+              "netProfitZloty": 4070.25,
+              "netProfitRate": 0.407025,
+              "annualisedNetReturn": 0.043578
+            }
+          }
+        },
+        {
+          "month": 97,
+          "date": "2034-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 539700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1509700,
+            "totalReceiptsGrossZloty": 15097,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 96843,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1412857,
+              "netProfitGrosze": 412857,
+              "netProfitZloty": 4128.57,
+              "netProfitRate": 0.412857,
+              "annualisedNetReturn": 0.043645
+            }
+          }
+        },
+        {
+          "month": 98,
+          "date": "2034-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 546600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1516600,
+            "totalReceiptsGrossZloty": 15166,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 98154,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1418446,
+              "netProfitGrosze": 418446,
+              "netProfitZloty": 4184.46,
+              "netProfitRate": 0.418446,
+              "annualisedNetReturn": 0.043700
+            }
+          }
+        },
+        {
+          "month": 99,
+          "date": "2034-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 553700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1523700,
+            "totalReceiptsGrossZloty": 15237,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 99503,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1424197,
+              "netProfitGrosze": 424197,
+              "netProfitZloty": 4241.97,
+              "netProfitRate": 0.424197,
+              "annualisedNetReturn": 0.043753
+            }
+          }
+        },
+        {
+          "month": 100,
+          "date": "2034-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 560700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1530700,
+            "totalReceiptsGrossZloty": 15307,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 100833,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1429867,
+              "netProfitGrosze": 429867,
+              "netProfitZloty": 4298.67,
+              "netProfitRate": 0.429867,
+              "annualisedNetReturn": 0.043809
+            }
+          }
+        },
+        {
+          "month": 101,
+          "date": "2035-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 567800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1537800,
+            "totalReceiptsGrossZloty": 15378,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 102182,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1435618,
+              "netProfitGrosze": 435618,
+              "netProfitZloty": 4356.18,
+              "netProfitRate": 0.435618,
+              "annualisedNetReturn": 0.043856
+            }
+          }
+        },
+        {
+          "month": 102,
+          "date": "2035-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 575000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1545000,
+            "totalReceiptsGrossZloty": 15450,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 103550,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1441450,
+              "netProfitGrosze": 441450,
+              "netProfitZloty": 4414.5,
+              "netProfitRate": 0.44145,
+              "annualisedNetReturn": 0.043906
+            }
+          }
+        },
+        {
+          "month": 103,
+          "date": "2035-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 581500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1551500,
+            "totalReceiptsGrossZloty": 15515,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 104785,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1446715,
+              "netProfitGrosze": 446715,
+              "netProfitZloty": 4467.15,
+              "netProfitRate": 0.446715,
+              "annualisedNetReturn": 0.043948
+            }
+          }
+        },
+        {
+          "month": 104,
+          "date": "2035-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 588600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1558600,
+            "totalReceiptsGrossZloty": 15586,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 106134,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1452466,
+              "netProfitGrosze": 452466,
+              "netProfitZloty": 4524.66,
+              "netProfitRate": 0.452466,
+              "annualisedNetReturn": 0.043986
+            }
+          }
+        },
+        {
+          "month": 105,
+          "date": "2035-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 595500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1565500,
+            "totalReceiptsGrossZloty": 15655,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 107445,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1458055,
+              "netProfitGrosze": 458055,
+              "netProfitZloty": 4580.55,
+              "netProfitRate": 0.458055,
+              "annualisedNetReturn": 0.044022
+            }
+          }
+        },
+        {
+          "month": 106,
+          "date": "2035-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 602700,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1572700,
+            "totalReceiptsGrossZloty": 15727,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 108813,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1463887,
+              "netProfitGrosze": 463887,
+              "netProfitZloty": 4638.87,
+              "netProfitRate": 0.463887,
+              "annualisedNetReturn": 0.044061
+            }
+          }
+        },
+        {
+          "month": 107,
+          "date": "2035-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 609600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1579600,
+            "totalReceiptsGrossZloty": 15796,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 110124,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1469476,
+              "netProfitGrosze": 469476,
+              "netProfitZloty": 4694.76,
+              "netProfitRate": 0.469476,
+              "annualisedNetReturn": 0.044093
+            }
+          }
+        },
+        {
+          "month": 108,
+          "date": "2035-08-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 8,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 616800,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1586800,
+            "totalReceiptsGrossZloty": 15868,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 111492,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1475308,
+              "netProfitGrosze": 475308,
+              "netProfitZloty": 4753.08,
+              "netProfitRate": 0.475308,
+              "annualisedNetReturn": 0.044127
+            }
+          }
+        },
+        {
+          "month": 109,
+          "date": "2035-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 624300,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1594300,
+            "totalReceiptsGrossZloty": 15943,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 112917,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1481383,
+              "netProfitGrosze": 481383,
+              "netProfitZloty": 4813.83,
+              "netProfitRate": 0.481383,
+              "annualisedNetReturn": 0.044178
+            }
+          }
+        },
+        {
+          "month": 110,
+          "date": "2035-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 631600,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1601600,
+            "totalReceiptsGrossZloty": 16016,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 114304,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1487296,
+              "netProfitGrosze": 487296,
+              "netProfitZloty": 4872.96,
+              "netProfitRate": 0.487296,
+              "annualisedNetReturn": 0.044227
+            }
+          }
+        },
+        {
+          "month": 111,
+          "date": "2035-11-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 639100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1609100,
+            "totalReceiptsGrossZloty": 16091,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 115729,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1493371,
+              "netProfitGrosze": 493371,
+              "netProfitZloty": 4933.71,
+              "netProfitRate": 0.493371,
+              "annualisedNetReturn": 0.044272
+            }
+          }
+        },
+        {
+          "month": 112,
+          "date": "2035-12-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 646400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1616400,
+            "totalReceiptsGrossZloty": 16164,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 117116,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1499284,
+              "netProfitGrosze": 499284,
+              "netProfitZloty": 4992.84,
+              "netProfitRate": 0.499284,
+              "annualisedNetReturn": 0.044316
+            }
+          }
+        },
+        {
+          "month": 113,
+          "date": "2036-01-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 654000,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1624000,
+            "totalReceiptsGrossZloty": 16240,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 118560,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1505440,
+              "netProfitGrosze": 505440,
+              "netProfitZloty": 5054.4,
+              "netProfitRate": 0.50544,
+              "annualisedNetReturn": 0.044362
+            }
+          }
+        },
+        {
+          "month": 114,
+          "date": "2036-02-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 661500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1631500,
+            "totalReceiptsGrossZloty": 16315,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 119985,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1511515,
+              "netProfitGrosze": 511515,
+              "netProfitZloty": 5115.15,
+              "netProfitRate": 0.511515,
+              "annualisedNetReturn": 0.044399
+            }
+          }
+        },
+        {
+          "month": 115,
+          "date": "2036-03-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 668500,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1638500,
+            "totalReceiptsGrossZloty": 16385,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 121315,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1517185,
+              "netProfitGrosze": 517185,
+              "netProfitZloty": 5171.85,
+              "netProfitRate": 0.517185,
+              "annualisedNetReturn": 0.044431
+            }
+          }
+        },
+        {
+          "month": 116,
+          "date": "2036-04-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 676100,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1646100,
+            "totalReceiptsGrossZloty": 16461,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 122759,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1523341,
+              "netProfitGrosze": 523341,
+              "netProfitZloty": 5233.41,
+              "netProfitRate": 0.523341,
+              "annualisedNetReturn": 0.044470
+            }
+          }
+        },
+        {
+          "month": 117,
+          "date": "2036-05-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 683400,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1653400,
+            "totalReceiptsGrossZloty": 16534,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 124146,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1529254,
+              "netProfitGrosze": 529254,
+              "netProfitZloty": 5292.54,
+              "netProfitRate": 0.529254,
+              "annualisedNetReturn": 0.044501
+            }
+          }
+        },
+        {
+          "month": 118,
+          "date": "2036-06-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 690900,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1660900,
+            "totalReceiptsGrossZloty": 16609,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 125571,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1535329,
+              "netProfitGrosze": 535329,
+              "netProfitZloty": 5353.29,
+              "netProfitRate": 0.535329,
+              "annualisedNetReturn": 0.044530
+            }
+          }
+        },
+        {
+          "month": 119,
+          "date": "2036-07-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 698200,
+            "feeGrosze": 30000,
+            "redemptionGrossGrosze": 1668200,
+            "totalReceiptsGrossZloty": 16682,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 126958,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1541242,
+              "netProfitGrosze": 541242,
+              "netProfitZloty": 5412.42,
+              "netProfitRate": 0.541242,
+              "annualisedNetReturn": 0.044557
+            }
+          }
+        },
+        {
+          "month": 120,
+          "date": "2036-08-17",
+          "kind": "Maturity",
+          "details": {
+            "periodIndex": 9,
+            "periodRate": 0.0550,
+            "rateIsProjected": true,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 705700,
+            "feeGrosze": 0,
+            "redemptionGrossGrosze": 1705700,
+            "totalReceiptsGrossZloty": 17057,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 134083,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1571617,
+              "netProfitGrosze": 571617,
+              "netProfitZloty": 5716.17,
+              "netProfitRate": 0.571617,
+              "annualisedNetReturn": 0.046209
+            }
+          }
+        },
+        {
+          "month": 121,
+          "date": "2036-09-17",
+          "kind": "DoesNotExist",
+          "details": null
+        }
+      ]
+    }
+  ]
+}

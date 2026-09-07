@@ -1,0 +1,16 @@
+{
+  "code": "OTS1126",
+  "kind": "Ots",
+  "source": "List emisyjny nr 73/2026 Ministra Finansów i Gospodarki z dnia 21 lipca 2026 r. (OTS1126), ust. 12-17 i 21-23",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 4,
+  "periodCount": 1,
+  "capitalizes": false,
+  "roundCapitalizedBase": false,
+  "principalFloor": "None",
+  "sale": { "from": "2026-08-01", "to": "2026-08-31" },
+  "rate": { "type": "fixed", "firstPeriodRatePercent": 2.00, "marginPercent": 0.00 },
+  "fee": { "type": "forfeitAllInterest" },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

@@ -1,0 +1,16 @@
+{
+  "code": "COI0930",
+  "kind": "Coi",
+  "source": "List emisyjny nr 86/2026 Ministra Finansów i Gospodarki z dnia 20 sierpnia 2026 r. (COI0930), ust. 14-19 i 26, zał. 1-3",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 1,
+  "periodCount": 4,
+  "capitalizes": false,
+  "roundCapitalizedBase": false,
+  "principalFloor": "FirstPeriodOnly",
+  "sale": { "from": "2026-09-01", "to": "2026-09-30" },
+  "rate": { "type": "inflation", "firstPeriodRatePercent": 4.75, "marginPercent": 1.50 },
+  "fee": { "type": "twoTier", "amountZloty": 2.00 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

@@ -1,0 +1,16 @@
+{
+  "code": "ROR0827",
+  "kind": "Ror",
+  "source": "List emisyjny nr 74/2026 Ministra Finansów i Gospodarki z dnia 21 lipca 2026 r. (ROR0827), ust. 14-16 i 28, zał. 1-4",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 12,
+  "periodCount": 12,
+  "capitalizes": false,
+  "roundCapitalizedBase": false,
+  "principalFloor": "FirstPeriodOnly",
+  "sale": { "from": "2026-08-01", "to": "2026-08-31" },
+  "rate": { "type": "nbpReference", "firstPeriodRatePercent": 4.00, "marginPercent": 0.00 },
+  "fee": { "type": "twoTier", "amountZloty": 0.50 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

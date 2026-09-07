@@ -1,0 +1,22 @@
+{
+  // Anchor: the mean of the last ten years, computed from the series in
+  // data/market/. It does not come from an NBP projection — a projection gives
+  // one central path and holds no high-inflation variant.
+  //
+  // CPI 4.91% = the arithmetic mean of 120 readings of Statistics Poland
+  // published from 2016-09 to 2026-08. The years 2022 (14.3% annual average)
+  // and 2023 (11.6%) pull it up; the median of the window is 3.0% and the
+  // extremes are -0.8% and 18.4%.
+  //
+  // Reference rate 3.09% = the day-weighted mean over the same window
+  // (2016-08-28 .. 2026-08-28). It sits below today's 3.75% because it
+  // contains the years 2020-2021 with the rate at 0.10%.
+  //
+  // The pair is historical, not an equilibrium: through most of the decade the
+  // real rate was negative. The scenario thus favours the inflation-linked
+  // bonds (COI, EDO, ROS, ROD) over ROR and DOR, and that is its value as a
+  // counterpoint to the base scenario.
+  "name": "Średnia z 10 lat: CPI 4,91% i stopa referencyjna NBP 3,09% dla okresów jeszcze nieogłoszonych",
+  "assumedCpiPercent": 4.91,
+  "assumedNbpReferencePercent": 3.09
+}

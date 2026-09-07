@@ -1,0 +1,7 @@
+bin/
+obj/
+*.user
+.DS_Store
+
+# A failing snapshot test writes this next to the expected file, for a manual diff.
+*.received

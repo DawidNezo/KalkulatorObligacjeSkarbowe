@@ -1,0 +1,16 @@
+{
+  "code": "DOR0928",
+  "kind": "Dor",
+  "source": "List emisyjny nr 84/2026 Ministra Finansów i Gospodarki z dnia 20 sierpnia 2026 r. (DOR0928), ust. 14-16 i 28, zał. 1-4",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 12,
+  "periodCount": 24,
+  "capitalizes": false,
+  "roundCapitalizedBase": false,
+  "principalFloor": "FirstPeriodOnly",
+  "sale": { "from": "2026-09-01", "to": "2026-09-30" },
+  "rate": { "type": "nbpReference", "firstPeriodRatePercent": 4.15, "marginPercent": 0.15 },
+  "fee": { "type": "twoTier", "amountZloty": 0.70 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

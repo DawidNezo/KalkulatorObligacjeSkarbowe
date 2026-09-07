@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Bonds.Cli</RootNamespace>
+    <AssemblyName>bonds</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bonds.Core\Bonds.Core.csproj" />
+  </ItemGroup>
+</Project>

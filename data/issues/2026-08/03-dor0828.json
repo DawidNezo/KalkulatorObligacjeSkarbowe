@@ -1,0 +1,16 @@
+{
+  "code": "DOR0828",
+  "kind": "Dor",
+  "source": "List emisyjny nr 75/2026 Ministra Finansów i Gospodarki z dnia 21 lipca 2026 r. (DOR0828), ust. 14-16 i 28, zał. 1-4",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 12,
+  "periodCount": 24,
+  "capitalizes": false,
+  "roundCapitalizedBase": false,
+  "principalFloor": "FirstPeriodOnly",
+  "sale": { "from": "2026-08-01", "to": "2026-08-31" },
+  "rate": { "type": "nbpReference", "firstPeriodRatePercent": 4.15, "marginPercent": 0.15 },
+  "fee": { "type": "twoTier", "amountZloty": 0.70 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

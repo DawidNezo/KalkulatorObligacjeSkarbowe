@@ -1,0 +1,237 @@
+#!/usr/bin/env bash
+# Uruchamia wszystkie komendy kalkulatora i zapisuje wyjścia do katalogu out/.
+#
+#   ./bonds-all                                     każdy miesiąc z data/issues/
+#   ./bonds-all --month 2026-09                     tylko wrzesień 2026 r.
+#   ./bonds-all --month 2026-09 --units 1000        pozycja 1000 obligacji
+#   ./bonds-all --purchase 2026-08-20               miesiąc wzięty z daty zakupu
+#   ./bonds-all --issue EDO0836,ROR0827             tylko wskazane emisje
+#   ./bonds-all --month 2026-08 --scenario data/scenarios/wysoka-inflacja.json
+#
+# Emisje są sprzedawane przez jeden miesiąc kalendarzowy, więc data/issues/ ma
+# podkatalog na miesiąc: data/issues/2026-09 to emisje z listów wrześniowych.
+# Raporty jednego miesiąca lądują w out/<RRRR-MM>/.
+#
+# Bez --month i bez --purchase skrypt przechodzi po wszystkich miesiącach, jakie
+# leżą w data/issues/. Data zakupu to wtedy pierwszy dzień miesiąca — niezależnie
+# od dnia uruchomienia, żeby raporty w repozytorium były powtarzalne.
+#
+# Każdy inny argument tego skryptu jest dopisywany do wszystkich komend, więc
+# całość raportów można wygenerować dla dowolnej pozycji czy scenariusza.
+# Opcja --issue zawęża zestaw emisji, a nie dokłada się do niego.
+#
+# Skrypt nadpisuje pliki, które sam tworzy, i nie usuwa niczego innego z out/.
+set -euo pipefail
+
+root=$(cd "$(dirname "$0")" && pwd)
+out_root="$root/out"
+issues_root="$root/data/issues"
+
+# Options shared by every command, without --issue and --purchase: the
+# commands add those two themselves, because --issue narrows the set and
+# --purchase depends on the month.
+common=()
+wanted_codes=()
+wanted_months=()
+purchase=""
+issues_override=""
+
+# Called as a plain command, not in a $(...) substitution, because an "exit"
+# in a subshell would not stop the script.
+require_value() {
+    if [ "$#" -lt 2 ] || [ -z "$2" ]; then
+        echo "Opcja '$1' wymaga wartości." >&2
+        exit 2
+    fi
+}
+
+# The help is the comment at the top of the file, up to the first code line —
+# which is why that header is in Polish, like all user-facing output.
+usage() {
+    sed -n '2,/^[^#]/p' "$0" | sed -n 's/^# \{0,1\}//p'
+}
+
+while [ "$#" -gt 0 ]; do
+    case $1 in
+        -h | --help)
+            usage
+            exit 0
+            ;;
+        --issue)
+            require_value "$@"
+            for code in $(printf '%s' "$2" | tr ',' ' '); do
+                wanted_codes+=("$code")
+            done
+            shift 2
+            ;;
+        --month)
+            require_value "$@"
+            case $2 in
+                [0-9][0-9][0-9][0-9]-[0-1][0-9]) wanted_months+=("$2") ;;
+                *)
+                    echo "Opcja '--month' wymaga miesiąca w formacie RRRR-MM; '$2' nim nie jest." >&2
+                    exit 2
+                    ;;
+            esac
+            shift 2
+            ;;
+        --issues)
+            require_value "$@"
+            issues_override=$2
+            shift 2
+            ;;
+        --purchase)
+            require_value "$@"
+            purchase=$2
+            shift 2
+            ;;
+        *)
+            common+=("$1")
+            shift
+            ;;
+    esac
+done
+
+# The purchase date names a month, so giving both at once could mean two
+# different things. Better to refuse than to guess.
+if [ -n "$purchase" ] && [ "${#wanted_months[@]}" -gt 0 ]; then
+    month_of_purchase=${purchase%-*}
+    for month in "${wanted_months[@]}"; do
+        if [ "$month" != "$month_of_purchase" ]; then
+            echo "Data zakupu $purchase nie mieści się w miesiącu $month." >&2
+            exit 2
+        fi
+    done
+fi
+
+# The months to compute. An explicit --issues means one pass over the given
+# directory; its name then labels the month, if it looks like YYYY-MM.
+months=()
+if [ -n "$issues_override" ]; then
+    months=("$(basename "$issues_override")")
+elif [ "${#wanted_months[@]}" -gt 0 ]; then
+    months=("${wanted_months[@]}")
+elif [ -n "$purchase" ]; then
+    months=("${purchase%-*}")
+else
+    if [ ! -d "$issues_root" ]; then
+        echo "Nie ma katalogu z emisjami: $issues_root" >&2
+        exit 2
+    fi
+
+    while IFS= read -r directory; do
+        months+=("$(basename "$directory")")
+    done < <(find "$issues_root" -mindepth 1 -maxdepth 1 -type d -name '????-??' | sort)
+
+    if [ "${#months[@]}" -eq 0 ]; then
+        echo "W $issues_root nie ma żadnego podkatalogu RRRR-MM." >&2
+        echo "Podaj --issues KATALOG, jeśli pliki emisji leżą gdzie indziej." >&2
+        exit 2
+    fi
+fi
+
+echo "Buduję kalkulator..." >&2
+dotnet build "$root/src/Bonds.Cli/Bonds.Cli.csproj" \
+    --configuration Release --verbosity quiet --nologo >/dev/null
+export BONDS_SKIP_BUILD=1
+
+problems=0
+errors=$(mktemp)
+trap 'rm -f "$errors"' EXIT
+
+# Writes one command's output to <directory>/<file>. The calculator writes the
+# file itself via --out, which gives the CSV the BOM marker that Excel on
+# Windows needs.
+generate() {
+    local directory=$1
+    local file=$2
+    shift 2
+    printf '  %-24s' "$file"
+    if "$root/bonds" "$@" --out "$directory/$file" >/dev/null 2>"$errors"; then
+        printf 'ok\n'
+    else
+        printf 'BŁĄD\n'
+        sed 's/^/      /' "$errors" >&2
+        problems=$((problems + 1))
+    fi
+}
+
+run_month() {
+    local month=$1
+    local issues_dir=${issues_override:-$issues_root/$month}
+    local out_dir=$out_root/$month
+
+    if [ ! -d "$issues_dir" ]; then
+        echo "Nie ma katalogu z emisjami: $issues_dir" >&2
+        problems=$((problems + 1))
+        return
+    fi
+
+    # The first day of the month always lies in the sale window and does not
+    # depend on the day of the run, so the committed reports come out the same
+    # every time.
+    local month_purchase=$purchase
+    if [ -z "$month_purchase" ]; then
+        month_purchase="$month-01"
+    fi
+
+    # The issue codes are read from the files, so adding a new issue needs no
+    # change to this script.
+    local codes
+    if [ "${#wanted_codes[@]}" -gt 0 ]; then
+        codes=${wanted_codes[*]}
+    else
+        codes=$(sed -n 's/.*"code"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "$issues_dir"/*.json | sort)
+        if [ -z "$codes" ]; then
+            echo "Żaden plik w $issues_dir nie podaje pola \"code\"." >&2
+            problems=$((problems + 1))
+            return
+        fi
+    fi
+
+    local options=(--issues "$issues_dir" --purchase "$month_purchase" ${common[@]+"${common[@]}"})
+
+    # Commands spanning all issues get the --issue narrowing, if there was one.
+    local aggregate=("${options[@]}")
+    if [ "${#wanted_codes[@]}" -gt 0 ]; then
+        for code in $codes; do
+            aggregate+=(--issue "$code")
+        done
+    fi
+
+    mkdir -p "$out_dir"
+    echo >&2
+    echo "=== $month  (zakup $month_purchase, emisje z $issues_dir)" >&2
+
+    echo "Tabela wyjścia, wszystkie emisje:" >&2
+    for format in md csv json; do
+        generate "$out_dir" "table.$format" table --format "$format" "${aggregate[@]}"
+    done
+
+    echo "Porównanie emisji:" >&2
+    for metric in irr profit rate; do
+        generate "$out_dir" "matrix-$metric.md" matrix --metric "$metric" "${aggregate[@]}"
+    done
+
+    echo "Tabela wyjścia, emisja po emisji:" >&2
+    for code in $codes; do
+        generate "$out_dir" "table-$code.md" table --issue "$code" "${options[@]}"
+    done
+
+    echo "Przebieg naliczania:" >&2
+    for code in $codes; do
+        generate "$out_dir" "explain-$code.md" explain --issue "$code" "${options[@]}"
+    done
+}
+
+for month in "${months[@]}"; do
+    run_month "$month"
+done
+
+echo >&2
+if [ "$problems" -eq 0 ]; then
+    echo "Gotowe. Pliki w $out_root" >&2
+else
+    echo "Nie udało się wykonać $problems komend. Pliki w $out_root" >&2
+    exit 1
+fi

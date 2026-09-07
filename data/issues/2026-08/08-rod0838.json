@@ -1,0 +1,16 @@
+{
+  "code": "ROD0838",
+  "kind": "Rod",
+  "source": "List emisyjny nr 80/2026 Ministra Finansów i Gospodarki z dnia 21 lipca 2026 r. (ROD0838), ust. 8-10 i 19, zał. 1-3",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 1,
+  "periodCount": 12,
+  "capitalizes": true,
+  "roundCapitalizedBase": false,
+  "principalFloor": "AllPeriods",
+  "sale": { "from": "2026-08-01", "to": "2026-08-31" },
+  "rate": { "type": "inflation", "firstPeriodRatePercent": 5.60, "marginPercent": 2.50 },
+  "fee": { "type": "accruedCapped", "amountZloty": 3.00 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

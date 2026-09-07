@@ -1,0 +1,112 @@
+{
+  "purchase": "2026-08-17",
+  "units": 100,
+  "taxRate": 0.19,
+  "scenario": {
+    "name": "Snapshot: CPI 3,50%, NBP 4,00%",
+    "assumedCpi": 0.0350,
+    "assumedNbpReference": 0.0400
+  },
+  "bonds": [
+    {
+      "code": "OTS1126",
+      "kind": "Ots",
+      "termMonths": 3,
+      "maturity": "2026-11-17",
+      "source": "test fixture for OTS1126",
+      "periods": [
+        {
+          "index": 0,
+          "start": "2026-08-17",
+          "end": "2026-11-17",
+          "actualDays": 92,
+          "annualRate": 0.0200,
+          "isProjected": false
+        }
+      ],
+      "exits": [
+        {
+          "month": 1,
+          "date": "2026-09-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0200,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 1700,
+            "feeGrosze": 1700,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 2,
+          "date": "2026-10-17",
+          "kind": "EarlyRedemption",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0200,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 3300,
+            "feeGrosze": 3300,
+            "redemptionGrossGrosze": 1000000,
+            "totalReceiptsGrossZloty": 10000,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 0,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1000000,
+              "netProfitGrosze": 0,
+              "netProfitZloty": 0,
+              "netProfitRate": 0,
+              "annualisedNetReturn": 0.000000
+            }
+          }
+        },
+        {
+          "month": 3,
+          "date": "2026-11-17",
+          "kind": "Maturity",
+          "details": {
+            "periodIndex": 0,
+            "periodRate": 0.0200,
+            "rateIsProjected": false,
+            "couponsGrossGrosze": 0,
+            "redemptionInterestGrossGrosze": 5000,
+            "feeGrosze": 0,
+            "redemptionGrossGrosze": 1005000,
+            "totalReceiptsGrossZloty": 10050,
+            "settlement": {
+              "couponTaxGrosze": 0,
+              "redemptionTaxGrosze": 950,
+              "couponsNetGrosze": 0,
+              "redemptionNetGrosze": 1004050,
+              "netProfitGrosze": 4050,
+              "netProfitZloty": 40.5,
+              "netProfitRate": 0.00405,
+              "annualisedNetReturn": 0.016165
+            }
+          }
+        },
+        {
+          "month": 4,
+          "date": "2026-12-17",
+          "kind": "DoesNotExist",
+          "details": null
+        }
+      ]
+    }
+  ]
+}

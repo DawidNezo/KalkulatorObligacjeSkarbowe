@@ -1,0 +1,16 @@
+{
+  "code": "TOS0829",
+  "kind": "Tos",
+  "source": "List emisyjny nr 76/2026 Ministra Finansów i Gospodarki z dnia 21 lipca 2026 r. (TOS0829), ust. 14-17 i 24, zał. 1-2",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 1,
+  "periodCount": 3,
+  "capitalizes": true,
+  "roundCapitalizedBase": true,
+  "principalFloor": "AllPeriods",
+  "sale": { "from": "2026-08-01", "to": "2026-08-31" },
+  "rate": { "type": "fixed", "firstPeriodRatePercent": 4.40, "marginPercent": 0.00 },
+  "fee": { "type": "accruedCapped", "amountZloty": 1.00 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

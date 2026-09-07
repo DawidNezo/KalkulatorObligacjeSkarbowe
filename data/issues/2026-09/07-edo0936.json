@@ -1,0 +1,16 @@
+{
+  "code": "EDO0936",
+  "kind": "Edo",
+  "source": "List emisyjny nr 87/2026 Ministra Finansów i Gospodarki z dnia 20 sierpnia 2026 r. (EDO0936), ust. 14-19 i 26, zał. 1-3",
+  "nominalZloty": 100.00,
+  "purchasePriceZloty": 100.00,
+  "periodsPerYear": 1,
+  "periodCount": 10,
+  "capitalizes": true,
+  "roundCapitalizedBase": false,
+  "principalFloor": "AllPeriods",
+  "sale": { "from": "2026-09-01", "to": "2026-09-30" },
+  "rate": { "type": "inflation", "firstPeriodRatePercent": 5.35, "marginPercent": 2.00 },
+  "fee": { "type": "accruedCapped", "amountZloty": 3.00 },
+  "earlyRedemption": { "minDaysAfterPurchase": 7, "minDaysBeforeMaturity": 20 }
+}

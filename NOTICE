@@ -1,0 +1,7 @@
+Kalkulator polskich obligacji skarbowych
+(Polish retail treasury bond calculator)
+Copyright 2026 Dawid Mazur
+
+The zrodla/ directory contains third-party documents and data (Ministry of
+Finance, National Bank of Poland) that are not covered by the Apache 2.0
+license of this project. See zrodla/README.md for details.

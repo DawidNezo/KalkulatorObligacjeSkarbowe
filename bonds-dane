@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+# Rewrites the NBP, Statistics Poland and Ministry of Finance source documents
+# into the files in data/:
+#
+#   ./bonds-dane                      market series from the files in zrodla/nbp/
+#   ./bonds-dane --dry-run            show what would change, write nothing
+#   ./bonds-dane letter FILE.pdf      paragraphs of an issue letter, by number
+#   ./bonds-dane --help               the full list of options (in Polish)
+#
+# The build goes to stderr, so stdout stays clean and can be redirected to a
+# file or piped. The build is incremental, so subsequent runs compile nothing
+# anew.
+#
+# BONDS_SKIP_BUILD=1 skips the build.
+set -e
+
+root=$(cd "$(dirname "$0")" && pwd)
+project="$root/src/Bonds.Sources/Bonds.Sources.csproj"
+
+if [ "${BONDS_SKIP_BUILD:-0}" != "1" ]; then
+    dotnet build "$project" --configuration Release --verbosity quiet --nologo >&2
+fi
+
+# The output directory depends on TargetFramework, so it is not hard-coded.
+binary=$(find "$root/src/Bonds.Sources/bin/Release" -name bonds-dane.dll -not -path '*/publish/*' | sort | tail -n 1)
+
+exec dotnet "$binary" "$@"

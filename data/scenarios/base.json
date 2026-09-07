@@ -1,0 +1,12 @@
+{
+  // CPI anchor: the NBP inflation target, 2.5% +/- 1 pp. An EDO bond lives ten
+  // years and a ROD twelve, thus almost their whole life lies past the horizon
+  // of any projection. For periods that far out the central bank target is a
+  // more honest anchor than the last point of whatever path a projection
+  // managed to compute.
+  //
+  // Reference rate: 3.75%, the level of the last MPC decision (2026-03-05).
+  "name": "Bazowy: CPI 2,50% (cel NBP) i stopa referencyjna NBP 3,75% dla okresów jeszcze nieogłoszonych",
+  "assumedCpiPercent": 2.50,
+  "assumedNbpReferencePercent": 3.75
+}
