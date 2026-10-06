@@ -38,6 +38,7 @@ Częstsze warianty:
 ./bonds --units 1000                    # pozycja 1000 obligacji
 ./bonds --issue EDO0836                 # tylko jedna emisja
 ./bonds --purchase 2026-09-10           # konkretna data zakupu
+./bonds --purchase 2026-08              # pierwszy dzień roboczy miesiąca (tu 3 sierpnia)
 ./bonds matrix                          # porównanie wszystkich emisji w jednej tabeli
 ./bonds --format csv --out out/tabela.csv   # do arkusza
 ./bonds --help                          # pełna lista opcji
@@ -362,7 +363,7 @@ wykupu. Listy ROR, DOR, COI, ROS, EDO i ROD takich przykładów nie zawierają,
 więc tam zostaje rachunek na kartce.
 
 > Data zakupu musi mieścić się w okresie sprzedaży emisji. Repozytorium opisuje
-> sierpień i wrzesień 2026 r., więc uruchomienie z datą po tym okresie kończy się
+> sierpień, wrzesień i październik 2026 r., więc uruchomienie z datą po tym okresie kończy się
 > błędem, który wymienia miesiące, dla których dane są. Wtedy dodaj katalog
 > nowego miesiąca albo podaj `--purchase` z jednego z tych miesięcy.
 

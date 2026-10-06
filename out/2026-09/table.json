@@ -1278,7 +1278,7 @@
           "end": "2026-11-01",
           "actualDays": 31,
           "annualRate": 0.0390,
-          "isProjected": true
+          "isProjected": false
         },
         {
           "index": 2,
@@ -1490,7 +1490,7 @@
           "details": {
             "periodIndex": 1,
             "periodRate": 0.0390,
-            "rateIsProjected": true,
+            "rateIsProjected": false,
             "couponsGrossGrosze": 35,
             "redemptionInterestGrossGrosze": 33,
             "feeGrosze": 70,
@@ -8997,7 +8997,7 @@
           "end": "2026-11-01",
           "actualDays": 31,
           "annualRate": 0.0375,
-          "isProjected": true
+          "isProjected": false
         },
         {
           "index": 2,
@@ -9113,7 +9113,7 @@
           "details": {
             "periodIndex": 1,
             "periodRate": 0.0375,
-            "rateIsProjected": true,
+            "rateIsProjected": false,
             "couponsGrossGrosze": 33,
             "redemptionInterestGrossGrosze": 31,
             "feeGrosze": 50,

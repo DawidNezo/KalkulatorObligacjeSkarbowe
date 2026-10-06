@@ -13,4 +13,7 @@ public interface IBusinessDayCalendar
     /// <paramref name="date"/>. The day given is never counted.
     /// </summary>
     DateOnly BusinessDaysBefore(DateOnly date, int count);
+
+    /// <summary>The first day of <paramref name="month"/> that is a business day.</summary>
+    DateOnly FirstBusinessDayOf(YearMonth month);
 }

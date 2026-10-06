@@ -13,12 +13,12 @@
 - Oprocentowanie: okres 1: 4,00%, dalej stopa referencyjna NBP + 0,00%
 - Kapitalizacja: brak, odsetki wypłacane
 - Opłata za przedterminowy wykup: 0,50 zł (w 1. okresie nie więcej niż narosłe odsetki)
-- Prognoza od okresu 2 (2026-10-01)
+- Prognoza od okresu 3 (2026-11-01)
 
 | M | Data wyjścia | Sposób | Stopa okresu | Kupony brutto | Odsetki w wykupie | Opłata | Wypłata brutto | Podatek | Zysk netto | Zysk % | IRR netto |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 2026-10-01 | wykup przedterminowy | 4,00% | 0,00 | 0,33 | 0,33 | 100,00 | 0,00 | 0,00 | 0,00% | 0,00% |
-| 2 | 2026-11-01 | wykup przedterminowy | 3,75%* | 0,33 | 0,31 | 0,50 | 100,14 | 0,07 | 0,07 | 0,07% | 0,42% |
+| 2 | 2026-11-01 | wykup przedterminowy | 3,75% | 0,33 | 0,31 | 0,50 | 100,14 | 0,07 | 0,07 | 0,07% | 0,42% |
 | 3 | 2026-12-01 | wykup przedterminowy | 3,75%* | 0,64 | 0,31 | 0,50 | 100,45 | 0,13 | 0,32 | 0,32% | 1,29% |
 | 4 | 2027-01-01 | wykup przedterminowy | 3,75%* | 0,95 | 0,31 | 0,50 | 100,76 | 0,19 | 0,57 | 0,57% | 1,72% |
 | 5 | 2027-02-01 | wykup przedterminowy | 3,75%* | 1,26 | 0,31 | 0,50 | 101,07 | 0,25 | 0,82 | 0,82% | 1,98% |

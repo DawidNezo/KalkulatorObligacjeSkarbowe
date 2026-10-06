@@ -1,4 +1,6 @@
 using System.Globalization;
+using Bonds.Core;
+using Bonds.Core.Calendar;
 using Bonds.Core.CommandLine;
 using Bonds.Core.Reporting;
 using static Bonds.Core.CommandLine.CommandLineArguments;
@@ -53,7 +55,8 @@ public sealed record CommandLineOptions(
           bonds explain --issue KOD        przebieg naliczania jednej emisji
 
         Opcje:
-          --purchase RRRR-MM-DD   data zakupu (domyślnie dzisiaj)
+          --purchase RRRR-MM-DD   data zakupu (domyślnie dzisiaj); sam miesiąc RRRR-MM
+                                  oznacza jego pierwszy dzień roboczy
           --units N               liczba obligacji w pozycji (domyślnie 1)
           --tax PROCENT           stawka podatku w procentach (domyślnie 19)
           --issue KOD             ogranicz do emisji; można podać wielokrotnie lub po przecinku
@@ -121,7 +124,7 @@ public sealed record CommandLineOptions(
                 case "--scenario": scenario = Value(arguments, ref index); break;
                 case "--nbp": nbp = Value(arguments, ref index); break;
                 case "--cpi": cpi = Value(arguments, ref index); break;
-                case "--purchase": purchase = ParseDate(Value(arguments, ref index), name); break;
+                case "--purchase": purchase = ParsePurchase(Value(arguments, ref index), name); break;
                 case "--units": units = ParseCount(Value(arguments, ref index)); break;
                 case "--tax": taxPercent = ParseDecimal(Value(arguments, ref index), name); break;
                 case "--format":
@@ -191,6 +194,26 @@ public sealed record CommandLineOptions(
         "irr" => ExitMetric.AnnualisedNetReturn,
         _ => throw new CommandLineException($"Nieznana metryka '{text}'. Dostępne: profit, rate, irr."),
     };
+
+    /// <summary>
+    /// A full date, or a bare month meaning its first business day: the first day
+    /// of a month is often a weekend or a holiday, when no one can buy a bond.
+    /// </summary>
+    private static DateOnly ParsePurchase(string text, string option)
+    {
+        if (DateOnly.TryParseExact(text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
+        {
+            return date;
+        }
+
+        if (DateOnly.TryParseExact(text, "yyyy-MM", CultureInfo.InvariantCulture, DateTimeStyles.None, out var month))
+        {
+            return PolishBusinessDayCalendar.Instance.FirstBusinessDayOf(YearMonth.Of(month));
+        }
+
+        throw new CommandLineException(
+            $"Opcja '{option}' wymaga daty RRRR-MM-DD albo miesiąca RRRR-MM; '{text}' nie jest żadnym z nich.");
+    }
 
     private static int ParseCount(string text) =>
         int.TryParse(text, NumberStyles.Integer, CultureInfo.InvariantCulture, out var value) && value >= 1

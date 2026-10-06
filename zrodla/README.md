@@ -54,6 +54,23 @@ Next to the PDFs sit excerpts from the site's announcements about the
 September offer (`komunikat.txt`) and about the exchange purchase
 (`zamiana.txt`) — official materials as well.
 
+### 2026-10 (letters no. 94–101/2026 of 21 September 2026)
+
+| File | Letter | Issue | Downloaded from |
+|---|---|---|---|
+| `file_410208.pdf` | no. 94/2026 | OTS0127 | [media_files/4695413e…](https://www.obligacjeskarbowe.pl/media_files/4695413e-860f-4363-afb4-cb37f08e4815.pdf) |
+| `file_410234.pdf` | no. 95/2026 | ROR1027 | [media_files/f4e264bb…](https://www.obligacjeskarbowe.pl/media_files/f4e264bb-537d-4a7e-813e-e4f099ea0cc5.pdf) |
+| `file_410231.pdf` | no. 96/2026 | DOR1028 | [media_files/d4585b0f…](https://www.obligacjeskarbowe.pl/media_files/d4585b0f-349e-42b0-a399-a43051310cc3.pdf) |
+| `file_410236.pdf` | no. 97/2026 | TOS1029 | [media_files/c15a26ae…](https://www.obligacjeskarbowe.pl/media_files/c15a26ae-de6e-4b89-a137-cb16687a7b0a.pdf) |
+| `file_410230.pdf` | no. 98/2026 | COI1030 | [media_files/e156037b…](https://www.obligacjeskarbowe.pl/media_files/e156037b-5b0c-40b8-85e1-0b205d4ac395.pdf) |
+| `file_410232.pdf` | no. 99/2026 | EDO1036 | [media_files/4f5f6353…](https://www.obligacjeskarbowe.pl/media_files/4f5f6353-fdcd-4b7e-b44f-63088098c534.pdf) |
+| `file_410235.pdf` | no. 100/2026 | ROS1032 | [media_files/429484ab…](https://www.obligacjeskarbowe.pl/media_files/429484ab-572e-4c43-9f64-3ea8fea13437.pdf) |
+| `file_410233.pdf` | no. 101/2026 | ROD1038 | [media_files/03e2bc03…](https://www.obligacjeskarbowe.pl/media_files/03e2bc03-0128-49b7-be93-669ef058b7c5.pdf) |
+
+`komunikat.txt` and `zamiana.txt` are excerpts from the announcements of
+24 September 2026: [the October offer](https://www.obligacjeskarbowe.pl/komunikaty/z-dniem-1-pazdziernika-2026-r-rozpoczyna-sie-sprzedaz-obligacji/)
+and [the exchange purchase](https://www.obligacjeskarbowe.pl/komunikaty/zamiana-ots1026-ror1026-dor1026-tos1026-coi1026-ros1026-edo1026/).
+
 ## `nbp/` — data of the National Bank of Poland
 
 Read only by `./bonds-dane`, which rewrites them into the series in
@@ -63,3 +80,8 @@ Read only by `./bonds-dane`, which rewrites them into the series in
 |---|---|---|
 | `stopy_procentowe_archiwum.xml` | archive of the Monetary Policy Council decisions on the base rates | [nbp.pl/podstawowe-stopy-procentowe-archiwum](https://nbp.pl/podstawowe-stopy-procentowe-archiwum/) |
 | `bazowa.xlsx` | core inflation workbook with the CPI y/y column (data of Statistics Poland) | [nbp.pl/statystyka-i-sprawozdawczosc/inflacja-bazowa](https://nbp.pl/statystyka-i-sprawozdawczosc/inflacja-bazowa/) |
+
+The nbp.pl pages sit behind a bot check; the same files are served directly
+from [static.nbp.pl/dane/stopy/stopy_procentowe_archiwum.xml](https://static.nbp.pl/dane/stopy/stopy_procentowe_archiwum.xml)
+and [static.nbp.pl/dane/inflacja/bazowa.xlsx](https://static.nbp.pl/dane/inflacja/bazowa.xlsx)
+(both last fetched on 6 October 2026).

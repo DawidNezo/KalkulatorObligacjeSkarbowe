@@ -79,6 +79,15 @@ public sealed class PolishBusinessDayCalendarTests
         Assert.Equal(new DateOnly(2026, 4, 30), fixing);
     }
 
+    [Theory]
+    [InlineData(2026, 9, 1)]   // Tuesday
+    [InlineData(2026, 8, 3)]   // 1 August is a Saturday
+    [InlineData(2024, 4, 2)]   // 1 April is Poniedzialek Wielkanocny
+    [InlineData(2027, 1, 4)]   // 1 January a Friday holiday, then a weekend
+    [InlineData(2027, 5, 4)]   // a weekend, then the 3 May holiday
+    public void FindsTheFirstBusinessDayOfAMonth(int year, int month, int day) =>
+        Assert.Equal(new DateOnly(year, month, day), calendar.FirstBusinessDayOf(new YearMonth(year, month)));
+
     [Fact]
     public void ZeroBusinessDaysBackGivesTheSameDay() =>
         Assert.Equal(new DateOnly(2026, 8, 17), calendar.BusinessDaysBefore(new DateOnly(2026, 8, 17), 0));

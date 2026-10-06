@@ -89,9 +89,16 @@ public sealed class CommandLineOptionsTests
     public void AnOptionCannotSwallowTheHelpFlagAsItsValue() =>
         Assert.Throws<CommandLineException>(() => CommandLineOptions.Parse(["table", "--out", "--help"], Today));
 
+    [Fact]
+    public void AMonthAloneMeansItsFirstBusinessDay() =>
+        // 1 August 2026 is a Saturday.
+        Assert.Equal(
+            new DateOnly(2026, 8, 3), CommandLineOptions.Parse(["table", "--purchase", "2026-08"], Today).Purchase);
+
     [Theory]
     [InlineData("17-08-2026")]
     [InlineData("2026/08/17")]
+    [InlineData("2026/08")]
     [InlineData("tomorrow")]
     public void RejectsADateInTheWrongFormat(string date) =>
         Assert.Throws<CommandLineException>(() => CommandLineOptions.Parse(["table", "--purchase", date], Today));

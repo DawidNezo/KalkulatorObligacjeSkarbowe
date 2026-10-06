@@ -6,13 +6,13 @@
   // Klucz = miesiąc OGŁOSZENIA wskaźnika przez GUS, nie miesiąc, którego
   // wskaźnik dotyczy: GUS ogłasza wskaźnik za miesiąc M w miesiącu M+1,
   // a listy emisyjne każą brać „wskaźnik ogłaszany w miesiącu poprzedzającym
-  // pierwszy miesiąc danego okresu odsetkowego”. Klucz 2026-08 to więc
-  // odczyt za 2026-07.
+  // pierwszy miesiąc danego okresu odsetkowego”. Klucz 2026-09 to więc
+  // odczyt za 2026-08.
   //
   // Wartość = inflacja r/r w procentach. Arkusz podaje ją jako
   // „analogiczny miesiąc poprzedniego roku = 100”, więc skrypt odjął 100.
   "name": "Inflacja CPI r/r wg miesiąca ogłoszenia GUS",
-  "knownThrough": "2026-08",
+  "knownThrough": "2026-09",
   "percent": {
     "2001-02": 7.40,
     "2001-03": 6.60,
@@ -320,6 +320,7 @@
     "2026-05": 3.20,
     "2026-06": 3.10,
     "2026-07": 2.50,
-    "2026-08": 3.00
+    "2026-08": 3.00,
+    "2026-09": 3.40
   }
 }

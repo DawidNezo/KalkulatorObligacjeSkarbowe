@@ -76,6 +76,17 @@ public sealed class PolishBusinessDayCalendar : IBusinessDayCalendar
         return result;
     }
 
+    public DateOnly FirstBusinessDayOf(YearMonth month)
+    {
+        var result = month.FirstDay;
+        while (!IsBusinessDay(result))
+        {
+            result = result.AddDays(1);
+        }
+
+        return result;
+    }
+
     private HashSet<DateOnly> MovableHolidays(int year) =>
         movableByYear.GetOrAdd(year, static y =>
         {

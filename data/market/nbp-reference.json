@@ -9,7 +9,7 @@
   // decyzji, której jeszcze nie ma. Zapytanie o dzień późniejszy zwraca
   // wartość ze scenariusza i jest w raporcie oznaczone gwiazdką.
   "name": "Stopa referencyjna NBP",
-  "knownThrough": "2026-08-28",
+  "knownThrough": "2026-10-06",
   "percent": {
     "1998-02-26": 24.00,
     "1998-04-23": 23.00,
