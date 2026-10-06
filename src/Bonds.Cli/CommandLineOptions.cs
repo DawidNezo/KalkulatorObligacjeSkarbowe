@@ -60,7 +60,8 @@ public sealed record CommandLineOptions(
           --units N               liczba obligacji w pozycji (domyślnie 1)
           --tax PROCENT           stawka podatku w procentach (domyślnie 19)
           --issue KOD             ogranicz do emisji; można podać wielokrotnie lub po przecinku
-          --format md|csv|json    format wyjścia; tylko dla komendy table (domyślnie md)
+          --format md|csv|json    format wyjścia (domyślnie md); table zna wszystkie trzy,
+                                  matrix tylko md i csv
           --metric profit|rate|irr    metryka; tylko dla komendy matrix (domyślnie irr)
           --out PLIK              zapisz do pliku; bez tej opcji wynik idzie na standardowe wyjście
           --issues KATALOG        katalog z plikami emisji (domyślnie data/issues).
@@ -75,6 +76,7 @@ public sealed record CommandLineOptions(
           bonds
           bonds --units 1000
           bonds matrix --metric irr
+          bonds matrix --purchase 2026-08 --issue EDO0836,COI0830 --format csv --out out/porownanie.csv
           bonds table --purchase 2026-08-17 --issue EDO0836 --format csv --out out/edo.csv
         """;
 
@@ -166,9 +168,14 @@ public sealed record CommandLineOptions(
             throw new CommandLineException($"Nieznany format '{OutputFormat}'. Dostępne: md, csv, json.");
         }
 
-        if (formatGiven && Command != CliCommand.Table)
+        if (formatGiven && Command == CliCommand.Explain)
         {
-            throw new CommandLineException("Opcja --format działa tylko z komendą table.");
+            throw new CommandLineException("Opcja --format działa tylko z komendami table i matrix.");
+        }
+
+        if (Command == CliCommand.Matrix && OutputFormat == "json")
+        {
+            throw new CommandLineException("Komenda matrix zna tylko formaty md i csv.");
         }
 
         if (metricGiven && Command != CliCommand.Matrix)

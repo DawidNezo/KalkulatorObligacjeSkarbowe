@@ -43,6 +43,11 @@ public sealed class ReportWriterSnapshotTests
             new ComparisonMatrixWriter(ExitMetric.NetProfit).Render(FourIssues()));
 
     [Fact]
+    public void CsvMatrixKeepsItsShape() =>
+        SnapshotAssert.Matches("matrix-irr.csv",
+            new CsvMatrixWriter(ExitMetric.AnnualisedNetReturn).Render(AllIssues()));
+
+    [Fact]
     public void ComparisonMatrixShowsTheNetProfitRateAsAPercentage()
     {
         var text = new ComparisonMatrixWriter(ExitMetric.NetProfitRate).Render(OneIssue());
@@ -62,11 +67,11 @@ public sealed class ReportWriterSnapshotTests
     {
         // The issue files are hand-edited; a code with a separator or a leading
         // "=" must not corrupt the table nor run as a formula in a spreadsheet.
-        var report = Build([TestIssues.Ots() with { Code = "=SUMA();X" }]);
+        var report = Build([TestIssues.Ots() with { Code = "=SUMA(),X" }]);
 
         var firstRow = new CsvReportWriter().Render(report).Split('\n')[1];
 
-        Assert.StartsWith("\"'=SUMA();X\"", firstRow, StringComparison.Ordinal);
+        Assert.StartsWith("\"'=SUMA(),X\"", firstRow, StringComparison.Ordinal);
     }
 
     [Fact]

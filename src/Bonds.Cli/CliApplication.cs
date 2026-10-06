@@ -114,7 +114,9 @@ public static class CliApplication
     private static string Render(CommandLineOptions options, CalculationReport report) => options.Command switch
     {
         CliCommand.Table => Writer(options.OutputFormat).Render(report),
-        CliCommand.Matrix => new ComparisonMatrixWriter(options.Metric).Render(report),
+        CliCommand.Matrix => options.OutputFormat == "csv"
+            ? new CsvMatrixWriter(options.Metric).Render(report)
+            : new ComparisonMatrixWriter(options.Metric).Render(report),
         CliCommand.Explain => new ExplainWriter(new RedemptionCalculator()).Render(report, options.IssueCodes[0]),
         _ => throw new CommandLineException($"Nieobsługiwana komenda '{options.Command}'."),
     };

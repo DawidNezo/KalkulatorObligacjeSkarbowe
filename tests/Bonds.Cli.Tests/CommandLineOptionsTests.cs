@@ -156,9 +156,17 @@ public sealed class CommandLineOptionsTests
             () => CommandLineOptions.Parse(["matrix", "--purchase", "2026-08-17", "--metric", "alpha"], Today));
 
     [Fact]
-    public void RejectsTheFormatOptionOutsideTheTableCommand() =>
+    public void RejectsTheFormatOptionForExplain() =>
+        Assert.Throws<CommandLineException>(
+            () => CommandLineOptions.Parse(["explain", "--issue", "EDO0836", "--format", "csv"], Today));
+
+    [Fact]
+    public void TheMatrixTakesCsvButNotJson()
+    {
+        Assert.Equal("csv", CommandLineOptions.Parse(["matrix", "--format", "csv"], Today).OutputFormat);
         Assert.Throws<CommandLineException>(
             () => CommandLineOptions.Parse(["matrix", "--format", "json"], Today));
+    }
 
     [Fact]
     public void RejectsTheMetricOptionOutsideTheMatrixCommand() =>

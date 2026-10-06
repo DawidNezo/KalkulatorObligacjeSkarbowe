@@ -13,9 +13,9 @@
 # Raporty jednego miesiąca lądują w out/<RRRR-MM>/.
 #
 # Bez --month i bez --purchase skrypt przechodzi po wszystkich miesiącach, jakie
-# leżą w data/issues/. Data zakupu to wtedy pierwszy dzień roboczy miesiąca
-# (weekendy i święta wypadają) — niezależnie od dnia uruchomienia, żeby raporty
-# w repozytorium były powtarzalne.
+# leżą w data/issues/. Data zakupu to wtedy pierwszy dzień roboczy miesiąca,
+# czyli z pominięciem weekendów i świąt. Nie zależy od dnia uruchomienia, więc
+# raporty w repozytorium za każdym razem wychodzą takie same.
 #
 # Każdy inny argument tego skryptu jest dopisywany do wszystkich komend, więc
 # całość raportów można wygenerować dla dowolnej pozycji czy scenariusza.
@@ -214,7 +214,9 @@ run_month() {
 
     echo "Porównanie emisji:" >&2
     for metric in irr profit rate; do
-        generate "$out_dir" "matrix-$metric.md" matrix --metric "$metric" "${aggregate[@]}"
+        for format in md csv; do
+            generate "$out_dir" "matrix-$metric.$format" matrix --metric "$metric" --format "$format" "${aggregate[@]}"
+        done
     done
 
     echo "Tabela wyjścia, emisja po emisji:" >&2

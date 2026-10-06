@@ -5,15 +5,15 @@ using Bonds.Core.Engine;
 namespace Bonds.Core.Reporting;
 
 /// <summary>
-/// One flat CSV table for every issue. The separator is a semicolon and the
-/// decimal mark is a comma, which is what a Polish spreadsheet expects.
+/// One flat CSV table for every issue. The separator is a comma and the decimal
+/// mark stays a Polish comma, thus every amount and rate is a quoted field.
 /// </summary>
 public sealed class CsvReportWriter : IReportWriter
 {
     /// <summary>Report text must never depend on the locale of the machine.</summary>
     private static readonly IFormatProvider Fixed = CultureInfo.InvariantCulture;
 
-    private const char Separator = ';';
+    private const char Separator = ReportFormat.CsvSeparator;
 
     private static readonly string[] Columns =
     [
@@ -34,32 +34,11 @@ public sealed class CsvReportWriter : IReportWriter
         {
             foreach (var exit in bond.Exits)
             {
-                text.AppendLine(string.Join(Separator, Cells(bond.Plan.Issue.Code, exit).Select(Escape)));
+                text.AppendLine(string.Join(Separator, Cells(bond.Plan.Issue.Code, exit).Select(ReportFormat.CsvCell)));
             }
         }
 
         return text.ToString();
-    }
-
-    /// <summary>
-    /// Quotes a field that would break the table and disarms a field that a
-    /// spreadsheet would run as a formula. The data files are hand-edited, thus a
-    /// stray semicolon or a leading "=" in a code must not corrupt the output.
-    /// A leading minus is dangerous only on text: a negative profit is a plain
-    /// number and stays untouched.
-    /// </summary>
-    private static string Escape(string cell)
-    {
-        var formula = cell.Length > 0
-            && (cell[0] is '=' or '+' or '@' or '\t'
-                || (cell[0] is '-' && !ReportFormat.IsNumber(cell)));
-        var safe = formula ? "'" + cell : cell;
-        return safe.Contains(Separator, StringComparison.Ordinal)
-               || safe.Contains('"', StringComparison.Ordinal)
-               || safe.Contains('\n', StringComparison.Ordinal)
-               || safe.Contains('\r', StringComparison.Ordinal)
-            ? "\"" + safe.Replace("\"", "\"\"", StringComparison.Ordinal) + "\""
-            : safe;
     }
 
     private static IEnumerable<string> Cells(string code, ExitOutcome exit)

@@ -134,6 +134,23 @@ Zamiast stopy zwrotu można pokazać kwotę zysku albo procent:
 ./bonds matrix --metric rate
 ```
 
+Macierz możesz też zapisać jako CSV i otworzyć w arkuszu. Tam łatwo przypiąć
+nagłówek i ukryć miesiące, które Cię nie interesują — w tabeli Markdown tego
+nie zrobisz. Opcja `--issue` zostawia tylko obligacje, które chcesz porównać:
+
+```bash
+./bonds matrix --purchase 2026-10 --issue EDO1036,COI1030,TOS1029 --format csv --out out/porownanie.csv
+```
+
+Puste pole w CSV oznacza to samo co kreska w wersji Markdown. `./bonds-all`
+zapisuje każdą macierz w obu wersjach, np. `matrix-irr.md` i `matrix-irr.csv`.
+
+Wszystkie pliki CSV mają przecinek jako separator, dzięki czemu GitHub, Numbers
+i Arkusze Google otwierają je bez żadnych ustawień. Liczby zostają z polskim
+przecinkiem dziesiętnym, więc są ujęte w cudzysłów (`"4,75%"`). Polski Excel
+po dwukrotnym kliknięciu wrzuci cały wiersz do jednej kolumny. Wtedy otwórz
+plik przez Dane → Z tekstu/pliku CSV i jako ogranicznik wybierz przecinek.
+
 ---
 
 ## Obsługiwane obligacje

@@ -50,6 +50,33 @@ internal static class ReportFormat
     internal static bool IsNumber(string text) =>
         decimal.TryParse(text.TrimEnd('%'), NumberStyles.Number, Polish, out _);
 
+    /// <summary>
+    /// The CSV field separator. A comma, as in RFC 4180, because the GitHub file
+    /// viewer reads nothing else; a value with a decimal comma gets quoted.
+    /// </summary>
+    internal const char CsvSeparator = ',';
+
+    /// <summary>
+    /// Quotes a field that would break the table and disarms a field that a
+    /// spreadsheet would run as a formula. The data files are hand-edited, thus a
+    /// stray comma or a leading "=" in a code must not corrupt the output.
+    /// A leading minus is dangerous only on text: a negative profit is a plain
+    /// number and stays untouched.
+    /// </summary>
+    internal static string CsvCell(string cell)
+    {
+        var formula = cell.Length > 0
+            && (cell[0] is '=' or '+' or '@' or '\t'
+                || (cell[0] is '-' && !IsNumber(cell)));
+        var safe = formula ? "'" + cell : cell;
+        return safe.Contains(CsvSeparator, StringComparison.Ordinal)
+               || safe.Contains('"', StringComparison.Ordinal)
+               || safe.Contains('\n', StringComparison.Ordinal)
+               || safe.Contains('\r', StringComparison.Ordinal)
+            ? "\"" + safe.Replace("\"", "\"\"", StringComparison.Ordinal) + "\""
+            : safe;
+    }
+
     internal static string Kind(ExitKind kind) => kind switch
     {
         ExitKind.EarlyRedemption => "wykup przedterminowy",
